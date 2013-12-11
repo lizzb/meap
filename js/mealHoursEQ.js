@@ -4,6 +4,7 @@
 	var dinnerEQ = 9.00;
 	var latenightEQ = 7.00;
 	
+// from wed dec 11 mealhouseq.js clusterfuc
 
 	var breakfastStartH = 7;	// 7:30 am
 	var breakfastStartM = 30;
