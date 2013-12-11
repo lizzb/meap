@@ -1,0 +1,151 @@
+#totals { 
+  background:#f0f0f0; 
+  font-size: 12pt; 
+}
+/* cant tellif makesdiff*/
+
+#totals span { text-align:right; }
+.total-field {
+  display: inline-block; 
+/*width: 30%;*/ 
+  padding: 0px 7px; 
+/*width: 100px;*/ 
+/*float: left; 
+margin-right: 10px;*/ 
+}
+
+.subtotal {text-align: left;}
+
+.carttitle {}
+.pricesingle {float: left; font-size: 8pt;}
+.pricetotal {float: right; font-size: 8pt;}
+.cart-prices {float: right; font-size: 9pt; padding-right: 2px;}
+
+.starter-template {
+  padding: 25px 5px; /*40px 15px;*/
+  text-align: center;
+} 
+
+.quantity {}
+.cart-item {display: block;}
+
+.empty {
+	float: right;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.item {
+	width:100%;
+	text-align:left;
+	height: 45px;
+	/*padding: 10px;*/
+	vertical-align: middle;
+}
+.item-name {
+	float: left;
+	text-align:left;
+	width: 100px;
+}
+.item-price {
+	float: right;
+
+}
+
+
+.container {padding: 5px; margin: auto;}
+
+
+/*
+.navbar-inverse {background-color: #563d7c;
+border-color: #463265;}
+
+.navbar-nav > li > a {
+color: #cdbfe3;
+}
+
+.navbar-inverse {height: 40px;}*/
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  /*height: 50px;*/
+  margin-bottom: 0;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+
+  /*text-align: center;*/
+  white-space: nowrap;
+  vertical-align: middle;
+
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0px; /*4px;*/
+
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn.disabled, .btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-info {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+
+.btn-info:hover, .btn-info:focus,
+.btn-info:active, .btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+}
+
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  background-image: none;
+}
+
+ 
+ /* disabled info colors 
+  background-color: #5bc0de;
+  border-color: #46b8da;
+  */

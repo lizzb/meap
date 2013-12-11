@@ -118,18 +118,14 @@ var plum = plum || {};
 
 				// The cart's .....
 				//cartremainder: 'amountOverMealEQ', //'meal-remainder',
-				//amountOverMealEQ: 'meal-remainder',
-				//amountUnderMealEQ: 'meal-remaining',
-				//amountOverMealEQ
-				//......
+				
 
-				pointsOverMealEQ: 'points-over',
+				pointsOverMealEQ: 'points-over',	//amountOverMealEQ: 'meal-remainder',
 				eqMealsOver: 'eq-meals-over',
-				pointsUnderMealEQ: 'points-under',
+				pointsUnderMealEQ: 'points-under',	//amountUnderMealEQ: 'meal-remaining',
 				eqMealsUnder: 'eq-meals-under',
 
-			//document.getElementById('cart-subtotal').innerHTML = toUSD(total);
-	//
+				//document.getElementById('cart-subtotal').innerHTML = toUSD(total);
 
 				
 				// The button that triggers emptying the shopping cart.
@@ -1201,9 +1197,26 @@ var plum = plum || {};
 			//BUG this doesnt initialize to eq under
 
 			var mealCount = this.forceInt(shop.subtotal / eq, 0); 
+			
+			// wheni had this html
+			/*
+			<span id="points-over" class='points-under'>0</span>
+			points<strong>over</strong>
+			<span id="eq-meals-over" class='eq-meals-over'>0</span> meals
+			<span id="points-under" class='points-over'>0</span>
+			points <strong>under</strong>
+			<span id="eq-meals-under" class='eq-meals-under'>0</span> meals
+
 			var pointsTilNextMeal = (shop.subtotal % eq);
 			var pointOverflow = eq - pointsTilNextMeal;
 			if (pointOverflow == 0) pointsTilNextMeal = eq;
+			*/
+
+			var pointOverflow = (shop.subtotal % eq);
+			var pointsTilNextMeal = eq;
+			if (pointOverflow != 0) pointsTilNextMeal = eq - pointOverflow;
+
+
 			//var pointOverflow = (shop.subtotal % eq);
 			//var pointsTilNextMeal = eq; // - pointOverflow;
 			//if (pointOverflow != 0) pointsTilNextMeal = eq - pointOverflow;// - pointOverflow;
@@ -1214,7 +1227,6 @@ var plum = plum || {};
 			////if (overflow != 0) pointsTilNextMeal = eq - overflow;
 			
 
-			// trial
 			//$('.' + c.cartmeals).each(function ()
 			//	{ this.innerHTML = mealCount; });
 			
@@ -1246,13 +1258,13 @@ var plum = plum || {};
 				//function updateTotal()
 			//{
 
-
-			//var total = shop.total; //0.00;
-			//var eq = 0.00;
-			//var mealCount = this.forceInt(shop.subtotal / eq, 0);  //0;
-			//var pointOverflow = total % eq;
-			//$('#points-over').innerHTML("sup");
-			//document.getElementById('points-over').innerHTML = pointOverflow;
+			/*
+			var total = shop.total; //0.00;
+			var eq = 0.00;
+			var mealCount = this.forceInt(shop.subtotal / eq, 0);  //0;
+			var pointOverflow = total % eq;
+			$('#points-over').innerHTML("sup");
+			document.getElementById('points-over').innerHTML = pointOverflow;
 			//document.getElementById(
 			//$("#eq-meals-over").innerHTML = mealCount;
 			//document.getElementById('points-under').innerHTML = eq - pointOverflow;
@@ -1273,8 +1285,8 @@ var plum = plum || {};
 			//amountOverMealEQ
 			//amountUnderMealEQ
 
-				//cartmeals: 'equivalency-meals',
-				//cartremainder: 'meal-remainder',
+			//cartmeals: 'equivalency-meals',
+			//cartremainder: 'meal-remainder',
 
 
 
