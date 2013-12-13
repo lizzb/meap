@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <!--link rel="shortcut icon" href="../../assets/ico/favicon.png"-->
 
+    	<!-- 	saved from index2clusterf >> from 
+			url=(0038)http://demo.plumjs.com/shop/index.html
+			plum.shop, the JavaScript shopping cart   -->
+
     <title>meap | Meal Equivalency & Points Calculator | nuFood</title>
 
-	<!-- from index2clusterfuck
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>plum.shop, the JavaScript shopping cart</title>
-	-->
-	<!-- saved from url=(0038)http://demo.plumjs.com/shop/index.html -->
+
 
 <script src="./js/itemPriceList.js"></script>
 <script src="./js/mealHoursEQ.js"></script>
 
 <!--
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.min.js"
+<script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 -->
 
-
-
-<link rel="stylesheet" href="./css/meap.css"/>
+	<link rel="stylesheet" href="./css/meap.css"/>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- rel then href... type="text/css"  href="./css/bootstrap.min.css" -->
+    <link rel="stylesheet" href="css/bootstrap.css">
 
- <link rel="stylesheet" href="./css/meap2.css"/>   
+ 	<link rel="stylesheet" href="./css/meap2.css"/>   
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -44,11 +42,14 @@
 
     <style>
 
+    .cart-count { color: #46b8da;}
+
     .total-field-nav
     {
     	color: white;
-
     }
+
+.total-field-nav strong { color: #5bc0de;; /*#46b8da;*/}
 
     </style>
   </head>
@@ -59,41 +60,13 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top">
     	<div class="container">
-        <div class="dropdown pull-right">
-              <!--a data-target="#" href="page.html" data-toggle="dropdown" class="dropdown-toggle"
-
-        	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
-   			 -->
-
-        	<button type="button" class="dropdown-toggle" data-toggle="dropdown">
-        		<span class="cart-quantity cart-count">0</span>
-        		<span class="caret"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-          </button>
-
-    	
-        <ul class="dropdown-menu">
-        	<li>
-        		<div id="cart"> </div>
-        	</li>
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li>
-            	<a class="empty" href="http://demo.plumjs.com/shop/index.html#">Clear all items
-            	</a>
-            </li>
-        </ul>
-    </div>
+        
 
       
         <div class="navbar-header">
 
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          	<span class="cart-quantity cart-count">0</span>
+          	<!-- span class="cart-quantity cart-count">0</span -->
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -121,6 +94,38 @@
           </ul>
         </div><!--/.nav-collapse -->
 
+<div class="dropdown pull-right">
+              <!--a data-target="#" href="page.html" data-toggle="dropdown" class="dropdown-toggle"
+
+        	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+   			 -->
+
+        	<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+        		<span class="cart-quantity cart-count">0</span>
+        		<span class="glyphicon glyphicon-shopping-cart"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+          </button>
+
+    	
+        <ul class="dropdown-menu">
+        	<li>Cart</li>
+        	<li class="divider"></li>
+        	<li>
+        		<div id="cart"> </div>
+        	</li>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li>
+            	<a class="empty" href="http://demo.plumjs.com/shop/index.html#">Clear all items
+            	</a>
+            </li>
+        </ul>
+    </div>
+
         <div class="total-field-nav">
 			<span id="points-over" class='points-over'>0</span>
 			points <strong>over</strong>
@@ -146,38 +151,36 @@
         Calculate how many items to buy from Lisa's Cafe to perfectly use up meal equivalencies. <br>
       <br>
 
-
+<!--
 Today: <span id="currentWeekday"></span> <br>
 Time: <span id="currentTime"></span> 
 EQ: <span id="eq"></span> <br>
+-->
 
-
-
+<span id="currentWeekday"></span>,
+<span id="currentTime"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EQ: <strong><span id="eq"></span></strong>
 
 
 	<div id="totals">
-
+		<!--
 		<label>Total items:&nbsp;&nbsp;</label>
 		<span class="cart-quantity">0</span>
-
+		-->
 
 		<!-- duplicated id naes as clsses t get it to work the way index1 did -->
-			
-
-			<!-- over under reversed fixlater i  updatetotals -->
 
 		<div class="total-field">
-			<span id="points-over" class='points-over'>0</span> <!-- points-under -->
-			points
-			<strong>over</strong>
+			<span id="points-over" class='points-over'>0</span> 
+			points <strong>over</strong>
 			<span id="eq-meals-over" class='eq-meals-over'>0</span>
 			meals
 		</div>
 
 		<div class="total-field">
-			<span id="points-under" class='points-under'>0</span> <!-- points-over-->
-			points
-			<strong>under</strong>
+			<span id="points-under" class='points-under'>0</span>
+			points <strong>under</strong>
 			<span id="eq-meals-under" class='eq-meals-under'>0</span>
 			meals
 		</div>
@@ -195,14 +198,76 @@ EQ: <span id="eq"></span> <br>
 
 			<!-- This is filled with a ul by the functions -->
 			<!-- <div id="cart"> </div> -->
-
+			<!--
 			<a class="empty" href="#">Clear all items</a>
-
+			-->
 			<br>
-			<hr>
+			
+			
+<!-- <span class=""></span>
+    glyphicon glyphicon-star
+    glyphicon glyphicon-star-empty
+    glyphicon glyphicon-heart
+    glyphicon glyphicon-heart-empty
+    
+    glyphicon glyphicon-shopping-cart
 
-			<button onclick="sortAZ()">Sort A-Z</button>
-			<button onclick="sortByPrice()">Sort By Price</button>
+
+
+    glyphicon glyphicon-search
+    glyphicon glyphicon-filter
+
+	glyphicon glyphicon-th-list
+	glyphicon glyphicon-list
+	glyphicon glyphicon-list-alt
+
+	
+
+	glyphicon glyphicon-info-sign
+    glyphicon glyphicon-question-sign
+
+	glyphicon glyphicon-warning-sign
+	glyphicon glyphicon-bullhorn
+	glyphicon glyphicon-asterisk
+	
+	glyphicon glyphicon-usd
+	glyphicon glyphicon-new-window
+
+	glyphicon glyphicon-cutlery
+	glyphicon glyphicon-wrench
+
+	.btn-outline:hover,
+	.btn-outline:focus,
+	.btn-outline:active {
+	color: #fff;
+	background-color: #563d7c;
+	border-color: #563d7c;
+	}
+	class="btn btn-block btn-lg btn-outline"
+	
+
+	    glyphicon glyphicon-sort
+    glyphicon glyphicon-sort-by-alphabet
+    glyphicon glyphicon-sort-by-alphabet-alt
+    glyphicon glyphicon-sort-by-attributes
+    glyphicon glyphicon-sort-by-attributes-alt
+-->
+
+			<button type="button" class="btn btn-default" onclick="sortAZ()">
+				Sort A-Z 
+				<!--<span class="glyphicon glyphicon-sort-by-alphabet"></span>
+				Sort Z-A <span class="glyphicon glyphicon-sort-by-alphabet-alt"></span>-->
+			</button>
+
+			<button type="button" class="btn btn-default" onclick="sortByPrice()">
+				Sort By Price
+				<!--
+				<span class="glyphicon glyphicon-sort"</span>
+				<span class="glyphicon glyphicon-usd"></span>
+				-->
+			</button>
+
+			<hr>
 
 			<!-- This is filled with html generated from an array -->
 			<div id="products"> </div>

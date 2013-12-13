@@ -1187,18 +1187,73 @@ var plum = plum || {};
 			$('.' + c.carttotal).each(function ()
 				{ this.innerHTML = shop.formatPrice(shop.total) });
 
+
+
 			// janky ass code ahead!
 
-			// var eq = 9;
+			// var eq = 9;.... set int he hours time file
 
-			// assumes youll only use a meal if a full one can be used by defaul
-			//ie displays points over 0meals first then points under 1 meals
+			// assumes youll only use a meal
+			// if a full one can be used by defaul
+			// ie displays points over 0 meals first
+			// then points under 1 meals
 
-			//BUG this doesnt initialize to eq under
+			updateEQ();
+			/*
+			var mealCost = $( '#eq' ).text();
+			console.log(mealCost);
+			var mealCost = document.getElementById('eq').innerHTML;
+			mealCost = mealCost.innerHTML;
+			console.log(mealCost);
+			*/
+			
+			
+	
+			
+			var mealCount = this.forceInt(shop.subtotal / eq, 0); 
+			
+			var pointOverflow = this.forceInt(shop.subtotal % eq, 0);
+			var pointsTilNextMeal = eq - pointOverflow;
+
+			/*
+			//BUG this doesnt initialize to eq under???
 
 			var mealCount = this.forceInt(shop.subtotal / eq, 0); 
 			
-			// wheni had this html
+			//hackyness blerg stupid shop.subtotal is NAN otherwise so can't be modd-ed
+			//var subtotal = shop.subtotal;
+			console.log(shop.subtotal);
+			//  i guess you can't take 0 % x??
+			var pointOverflow = 0;
+			if(shop.subtotal != 0) pointOverflow = (shop.subtotal % eq);
+			console.log(pointOverflow);
+			var pointsTilNextMeal = eq - pointOverflow;
+			
+			// variations didn't work, still doesnt initialize to 7/9 under right away
+			//var pointsTilNextMeal = eq;
+			//if (pointOverflow != 0) pointsTilNextMeal = eq - pointOverflow;
+			//var pointsTilNextMeal = eq - pointOverflow;
+			//if (pointsTilNextMeal == 0) pointsTilNextMeal = eq;
+		*/
+
+			$('.' + c.cartmeals).each(function ()
+				{ this.innerHTML = mealCount; });
+			
+			//c.pointsOverMealEQ-->//amountOverMealEQ
+			//+ " over " + mealCount + " meals.";  //amountTilFullMealEQ); });
+			$('.' + c.pointsOverMealEQ).each(function () 
+				{ this.innerHTML = shop.formatPrice(pointOverflow) });
+
+			$('.' + c.eqMealsOver).each(function () 
+				{ this.innerHTML = mealCount; });
+				
+			$('.' + c.pointsUnderMealEQ).each(function ()  
+				{ this.innerHTML = shop.formatPrice(pointsTilNextMeal)}); 
+
+			$('.' + c.eqMealsUnder).each(function () 
+				{ this.innerHTML = mealCount+1; });
+
+// wheni had backwards this html.....
 			/*
 			<span id="points-over" class='points-under'>0</span>
 			points<strong>over</strong>
@@ -1212,53 +1267,21 @@ var plum = plum || {};
 			if (pointOverflow == 0) pointsTilNextMeal = eq;
 			*/
 
-			var pointOverflow = (shop.subtotal % eq);
-			var pointsTilNextMeal = eq;
-			if (pointOverflow != 0) pointsTilNextMeal = eq - pointOverflow;
-
-
-			//var pointOverflow = (shop.subtotal % eq);
-			//var pointsTilNextMeal = eq; // - pointOverflow;
-			//if (pointOverflow != 0) pointsTilNextMeal = eq - pointOverflow;// - pointOverflow;
 			
-			////var overflow = (shop.subtotal % eq);
-			////var pointsTilNextMeal = eq;
+			
+			//var pointsTilNextMeal = eq; // - pointOverflow;
+			//if (pointOverflow != 0) pointsTilNextMeal = eq - pointOverflow;
 			//if (overflow == 0) pointsTilNextMeal = eq;
 			////if (overflow != 0) pointsTilNextMeal = eq - overflow;
-			
 
-			//$('.' + c.cartmeals).each(function ()
-			//	{ this.innerHTML = mealCount; });
-			
-			//c.pointsOverMealEQ-->//amountOverMealEQ
-			//+ " over " + mealCount + " meals.";  //amountTilFullMealEQ); });
-			$('.' + c.pointsOverMealEQ).each(function () 
-				{ this.innerHTML = shop.formatPrice(pointOverflow) });
-
-			$('.' + c.eqMealsOver).each(function () 
-				{ this.innerHTML = mealCount; });
-				
+			//................................
 			//c.pointsUnderMealEQ <--//c.amountUnderMealEQ)
 			//+ "<strong> under </strong>" + (mealCount + 1) + " meals."; }); 
 			
-			$('.' + c.pointsUnderMealEQ).each(function ()  
-				{ this.innerHTML = shop.formatPrice(pointsTilNextMeal)}); 
-
-			$('.' + c.eqMealsUnder).each(function () 
-				{ this.innerHTML = mealCount+1; });
-
-
-			//eqMealsOver
-			//eqMealsUnder
-
-			//var amountUnderMealEQ
-			//................................
-
 			//merging ish from mealhourseq.js..... so yucky
-				//function updateTotal()
-			//{
-
 			/*
+			function updateTotal() {
+
 			var total = shop.total; //0.00;
 			var eq = 0.00;
 			var mealCount = this.forceInt(shop.subtotal / eq, 0);  //0;
@@ -1266,40 +1289,41 @@ var plum = plum || {};
 			$('#points-over').innerHTML("sup");
 			document.getElementById('points-over').innerHTML = pointOverflow;
 			//document.getElementById(
-			//$("#eq-meals-over").innerHTML = mealCount;
-			//document.getElementById('points-under').innerHTML = eq - pointOverflow;
-			//document.getElementById('eq-meals-under').innerHTML = mealCount + 1;
-
-			//document.getElementById('cart-subtotal').innerHTML = toUSD(total);
-			//}
-
-			//................................
+			$("#eq-meals-over").innerHTML = mealCount;
+			document.getElementById('points-under').innerHTML = eq - pointOverflow;
+			document.getElementById('eq-meals-under').innerHTML = mealCount + 1;
+			document.getElementById('cart-subtotal').innerHTML = toUSD(total);
+			} */
 
 
-			//amountTilFullMealEQ); });
-			/*equivalency-meals++
-			pointsOverMealEQ
-			pointsUnderMealEQ
+			/*
+			amountTilFullMealEQ); });
+			equivalency-meals++
+			pointsOverMealEQ	//amountOverMealEQ
+			pointsUnderMealEQ	//amountUnderMealEQ
 			eqMealsUnder
-			eqMealsOver*/
-			//amountOverMealEQ
-			//amountUnderMealEQ
-
-			//cartmeals: 'equivalency-meals',
-			//cartremainder: 'meal-remainder',
-
-
-
-			//shop.shipping = parseFloat(shop.calcShipping().toFixed(2));
-			//shop.tax = parseFloat(shop.calcTax().toFixed(2));
-			//shop.discount = parseFloat(shop.calcDiscount(discountTarget).toFixed(2));
+			eqMealsOver
+			cartmeals: 'equivalency-meals',
+			cartremainder: 'meal-remainder',
 			
-			//$('.' + c.cartshipping).each(function ()
-			//	{ this.innerHTML = shop.formatPrice(shop.shipping); });
-			//$('.' + c.carttax).each(function ()
-			//	{ this.innerHTML = shop.formatPrice(shop.tax); });
-			//$('.' + c.cartdiscount).each(function ()
-			//	{ this.innerHTML = '-' + shop.formatPrice(shop.discount); });
+			eqMealsOver
+			eqMealsUnder
+			var amountUnderMealEQ
+			*/
+
+
+			/*
+			shop.shipping = parseFloat(shop.calcShipping().toFixed(2));
+			shop.tax = parseFloat(shop.calcTax().toFixed(2));
+			shop.discount = parseFloat(shop.calcDiscount(discountTarget).toFixed(2));
+			
+			$('.' + c.cartshipping).each(function ()
+				{ this.innerHTML = shop.formatPrice(shop.shipping); });
+			$('.' + c.carttax).each(function ()
+				{ this.innerHTML = shop.formatPrice(shop.tax); });
+			$('.' + c.cartdiscount).each(function ()
+				{ this.innerHTML = '-' + shop.formatPrice(shop.discount); });
+			*/
 			
 		}
 
