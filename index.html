@@ -16,16 +16,23 @@
 	<!-- saved from url=(0038)http://demo.plumjs.com/shop/index.html -->
 
 <script src="./js/itemPriceList.js"></script>
-
-
-
 <script src="./js/mealHoursEQ.js"></script>
+
+<!--
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+-->
 
 
 
 <link rel="stylesheet" href="./css/meap.css"/>
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+
  <link rel="stylesheet" href="./css/meap2.css"/>   
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -65,7 +72,19 @@
             <li><a href="#about">About</a></li>
             <li>
             	<a class="empty" href="http://demo.plumjs.com/shop/index.html#">Clear all items</a>
-            	
+            </li>
+
+            <li class="dropdown pull-right">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </li>
+
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -84,6 +103,20 @@ Today: <span id="currentWeekday"></span> <br>
 Time: <span id="currentTime"></span> 
 EQ: <span id="eq"></span> <br>
 
+
+        <!--a data-target="#" href="page.html" data-toggle="dropdown" class="dropdown-toggle"-->
+
+    <div class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        	Dropdown <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
 
 
 	<div id="totals">
