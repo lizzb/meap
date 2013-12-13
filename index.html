@@ -40,6 +40,17 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
+
+
+    <style>
+
+    .total-field-nav
+    {
+    	color: white;
+
+    }
+
+    </style>
   </head>
 
 
@@ -47,48 +58,85 @@
 <body onload="start();">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+    	<div class="container">
+        <div class="dropdown pull-right">
+              <!--a data-target="#" href="page.html" data-toggle="dropdown" class="dropdown-toggle"
+
+        	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+   			 -->
+
+        	<button type="button" class="dropdown-toggle" data-toggle="dropdown">
+        		<span class="cart-quantity cart-count">0</span>
+        		<span class="caret"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+          </button>
+
+    	
+        <ul class="dropdown-menu">
+        	<li>
+        		<div id="cart"> </div>
+        	</li>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li>
+            	<a class="empty" href="http://demo.plumjs.com/shop/index.html#">Clear all items
+            	</a>
+            </li>
+        </ul>
+    </div>
+
+      
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="cart-quantity cart-count">0</span>
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          	<span class="cart-quantity cart-count">0</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
 
-          
-
           <a class="navbar-brand" href="#">
-				<span class="eq-meals-over equivalency-meals">0</span> <label> Meals </label>  + 
-				<span class="points-over meal-remainder">0</span> <label> Points </label> 
-          </a>
-          		
-          		
+				<span class="eq-meals-over equivalency-meals">0</span> 
+				<label> Meals </label>  + 
+				<span class="points-over meal-remainder">0</span> 
+				<label> Points </label> 
+          </a>	
         </div>
+
+
+
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active">
             	<a href="#">Home</a>
             </li>
             <li><a href="#about">About</a></li>
-            <li>
+            <!--li>
             	<a class="empty" href="http://demo.plumjs.com/shop/index.html#">Clear all items</a>
-            </li>
-
-            <li class="dropdown pull-right">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </li>
-
-
+            </li-->
           </ul>
         </div><!--/.nav-collapse -->
-      </div>
-    </div>
+
+        <div class="total-field-nav">
+			<span id="points-over" class='points-over'>0</span>
+			points <strong>over</strong>
+			<span id="eq-meals-over" class='eq-meals-over'>0</span>
+			meals
+		</div>
+
+		<div class="total-field-nav">
+			<span id="points-under" class='points-under'>0</span>
+			points <strong>under</strong>
+			<span id="eq-meals-under" class='eq-meals-under'>0</span>
+			meals
+		</div>
+
+      </div> <!-- /.container -->
+    </div> <!-- /.navbar navbar-inverse navbar-fixed-top -->
     
 
     	
@@ -104,19 +152,7 @@ Time: <span id="currentTime"></span>
 EQ: <span id="eq"></span> <br>
 
 
-        <!--a data-target="#" href="page.html" data-toggle="dropdown" class="dropdown-toggle"-->
 
-    <div class="dropdown">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-        	Dropdown <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-        </ul>
-    </div>
 
 
 	<div id="totals">
@@ -158,7 +194,7 @@ EQ: <span id="eq"></span> <br>
 
 
 			<!-- This is filled with a ul by the functions -->
-			<div id="cart"> </div>
+			<!-- <div id="cart"> </div> -->
 
 			<a class="empty" href="#">Clear all items</a>
 
@@ -225,5 +261,17 @@ $('#cart').plum('shop', {
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+ // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
+  $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+    </script>
   </body>
 </html>
