@@ -31,7 +31,7 @@
 
     .cart-icon { color: #46b8da; font-size: 12pt;}
     .cart-count { color: #46b8da;}
-    .total-field-nav { color: white; }
+    .total-field-nav { color: white; font-size: 12pt; font-weight: normal; }
 	.total-field-nav strong { color: #5bc0de;; /*#46b8da;*/}
 	.cart-dropdown {width: 300px;}
 
@@ -60,7 +60,15 @@
 				<label> Meals </label>  + 
 				<span class="points-over meal-remainder">0</span> 
 				<label> Points </label> 
+
+				<div class="total-field-nav">
+					<span id="points-under" class='points-under'>0</span>
+			 		<strong>under</strong>
+					<span id="eq-meals-under" class='eq-meals-under'>0</span>
+					meals
+				</div>
           </a>	
+
         </div> <!-- / .navbar-header -->
 
 
@@ -73,19 +81,6 @@
         </div> <!--/.nav-collapse -->
 
 
-
-<!--<div class="dropdown pull-right">
-	 data-toggle="collapse"   class="navbar-toggle"
-              data-target=".navbar-collapse">
-              a data-target="#" href="page.html"  
-
-        	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
-   			 -->
-
-		<!--
-		<label>Total items:&nbsp;&nbsp;</label>
-		<span class="cart-quantity">0</span>
-		-->
 
     	<button type="button" class="dropdown-toggle btn pull-right" data-toggle="dropdown">
     		<span class="cart-quantity cart-count">0</span>
@@ -105,30 +100,39 @@
             <li><a href="#">Action</a></li>
         	-->
             <li class="divider"></li>
-            
-            <!--
-            <li><a href="#">Separated link</a></li>
-        	-->
-            <li>
-            	<a class="empty" href="#">Clear all items</a>
-            </li>
-        </ul>
-    <!--/div-->
 
+
+
+
+            <li class="total-field subtotal">
+			<label> Total: </label>
+			<span id="cart-subtotal" class="cart-subtotal">$0.00</span>
+			</li>
+
+
+           
+            <li> <a class="empty" href="#">Clear all items</a> </li>
+        </ul>
+
+
+
+        <!--
         <div class="total-field-nav">
 			<span id="points-over" class='points-over'>0</span>
 			points <strong>over</strong>
 			<span id="eq-meals-over" class='eq-meals-over'>0</span>
 			meals
 		</div>
-
+-->
 		<div class="total-field-nav">
 			<span id="points-under" class='points-under'>0</span>
 			points <strong>under</strong>
 			<span id="eq-meals-under" class='eq-meals-under'>0</span>
 			meals
 		</div>
+		
 
+		
       </div> <!-- /.container -->
     </div> <!-- /.navbar navbar-inverse navbar-fixed-top -->
     
