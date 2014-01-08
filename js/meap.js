@@ -1211,8 +1211,10 @@ var plum = plum || {};
 	
 			
 			var mealCount = this.forceInt(shop.subtotal / eq, 0); 
-			
-			var pointOverflow = this.forceInt(shop.subtotal % eq, 0);
+			// var pointOverflow = this.forceInt(shop.subtotal % eq, 0);
+			// why did i ever force int???
+
+			var pointOverflow = shop.subtotal % eq;
 			var pointsTilNextMeal = eq - pointOverflow;
 
 			/*
