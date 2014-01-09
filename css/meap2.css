@@ -49,10 +49,7 @@ margin-right: 10px;*/
 	text-align:left;
 	width: 100px;
 }
-.item-price {
-	float: right;
-
-}
+.item-price { float: right; }
 
 
 .container {padding: 5px; margin: auto;}
@@ -151,3 +148,6 @@ fieldset[disabled] .btn {
   background-color: #5bc0de;
   border-color: #46b8da;
   */
+
+
+  

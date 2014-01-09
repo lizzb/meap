@@ -61,14 +61,23 @@
 				<span class="points-over meal-remainder">0</span> 
 				<label> Points </label> 
 
+
 				<!--
+		        <div class="total-field-nav">
+					<span id="points-over" class='points-over'>0</span>
+					points <strong>over</strong>
+					<span id="eq-meals-over" class='eq-meals-over'>0</span>
+					meals
+				</div>
+				-->
+
 				<div class="total-field-nav">
 					<span id="points-under" class='points-under'>0</span>
 			 		<strong>under</strong>
 					<span id="eq-meals-under" class='eq-meals-under'>0</span>
 					meals
 				</div>
-			-->
+		
 				
           </a>	
 
@@ -93,25 +102,20 @@
 
 
 
-        <!--
-        <div class="total-field-nav">
-			<span id="points-over" class='points-over'>0</span>
-			points <strong>over</strong>
-			<span id="eq-meals-over" class='eq-meals-over'>0</span>
-			meals
-		</div>
--->
 
-<button type="button" class="dropdown-toggle btn pull-right" data-toggle="collapse" data-target=".cart-dropdown">
+
+	<button type="button" class="dropdown-toggle btn pull-right" 
+	data-toggle="collapse" data-target=".cart-dropdown">
     		<span class="cart-quantity cart-count">0</span>
     		<span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
       </button>
-		<div class="total-field-nav">
-			<span id="points-under" class='points-under'>0</span>
-			points <strong>under</strong>
-			<span id="eq-meals-under" class='eq-meals-under'>0</span>
-			meals
-		</div>
+
+	<div class="total-field-nav">
+		<span id="points-under" class='points-under'>0</span>
+		points <strong>under</strong>
+		<span id="eq-meals-under" class='eq-meals-under'>0</span>
+		meals
+	</div>
 
 
 
@@ -151,7 +155,8 @@
         <h1>meap</h1>
         <p class="lead">Meal Equivalency and Points Calculator</p>
         Calculate how many items to buy from Lisa's Cafe to perfectly use up meal equivalencies. <br>
-      <br>
+   <!--   <br>
+
 
 	<button type="button" class="btn btn-danger"
 	data-toggle="collapse" data-target="#filtering">
@@ -160,7 +165,7 @@
 
 
 
-<div id="filtering" class="collapse"> <!-- in reveals at first-->
+<div id="filtering" class="collapse"> <!-- in reveals at first--
     <ul>
 <li> <span class="glyphicon glyphicon-filter"></span> filter </li>
 <li> <span class="glyphicon glyphicon-sort"></span> sort </li>
@@ -183,23 +188,23 @@
 </div>
 
 <button type="button" class="btn btn-primary">
-	<!-- btn-lg sort-btn" onclick="sort(alpha, desc)"> Z-A  -->
+	<!-- btn-lg sort-btn" onclick="sort(alpha, desc)"> Z-A  --
 	<span class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
 </button>
 
 <button type="button" class="btn btn-primary">
-	<!-- onclick="sort(alpha, asc)"> A-Z -->
+	<!-- onclick="sort(alpha, asc)"> A-Z --
 	<span class="glyphicon glyphicon-sort-by-alphabet"></span>
 </button>
 
 <button type="button" class="btn btn-success">
-	<!-- onclick="sort(price, asc)"> Cost Lo-Hi -->
+	<!-- onclick="sort(price, asc)"> Cost Lo-Hi --
 	<span class="glyphicon glyphicon-usd"></span>
 	<span class="glyphicon glyphicon-arrow-up"></span>
 </button>
 
 <button type="button" class="btn btn-success">
-	<!-- onclick="sort(price, desc)"> Cost Hi-Lo -->
+	<!-- onclick="sort(price, desc)"> Cost Hi-Lo --
 	<span class="glyphicon glyphicon-usd"></span>
 	<span class="glyphicon glyphicon-arrow-down"></span>
 </button>
