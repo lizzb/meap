@@ -120,14 +120,29 @@ function updateEQ()
 {
 	eq = lunchEQ;
 }*/
+/*
+alert("h >= dinnerStartH" + h >= dinnerStartH + " && h <= dinnerEndH" + h <= dinnerEndH);
+alert("m > dinnerStartM" + m >= dinnerStartM + " && m < dinnerEndM" + m <= dinnerEndM);
+*/
+
+//alert("h: " + h + " m: " + m);
+//alert("h >= dinnerStartH && h <= dinnerEndH):  " + h >= dinnerStartH + " && " + h <= dinnerEndH);
+
+//)  (h >= dinnerStartH )" + (h > dinnerStartH) + " && h <= dinnerEndH" + h <= dinnerEndH);
 
 //else if
+/*
 if 	(	(h > dinnerStartH && h < dinnerEndH) && 
 		(m > dinnerStartM && m < dinnerEndM) )
+*/
+if 	(	(h >= dinnerStartH && h <= dinnerEndH) && 
+		(m >= dinnerStartM && m <= dinnerEndM) )
 {
-	eq = dinnerEQ;
+	eq = 7.00; //dinnerEQ; // do not know why this time isnt working, sun jan 19.... always just 7
 }
-else eq = latenightEQ;
+else eq = 9.00; //lunchEQ; //latenightEQ;
+
+// clearly i have some logic problem that will probably reveal itself if i clean up my comments
 
 //check if dinnertime
 //check if breakfast
