@@ -1,4 +1,43 @@
-.cart-count { color: lightgrey; font-size: 10pt;}
+
+
+/*.cart-count { color: lightgrey; font-size: 10pt;}*/
+
+.cart-icon { 
+    /*color: #46b8da;*/ 
+    font-size: 16pt; /* 12 */
+  }
+
+
+.cart-count { 
+    /*color: #46b8da;*/ 
+    font-weight: bold;
+    color: lightgrey; font-size: 10pt;
+  }
+
+  /*.cart-count { color: lightgrey; font-size: 10pt;}  this used to be in meap2 */
+
+
+
+/* CART BUTTON */
+
+    /* CART MENU/DROPDOWN/LIST */
+
+
+/* well this is hacky, i should make ti only for the list in question..ohwell */
+
+ul {
+  list-style:none; 
+}
+
+.cart-dropdown { 
+  margin: 0;
+  padding: 0;
+   /* list-style:none; this didnt change... with .cart-dropdown ul { */
+    /*width: 300px;
+    margin-right: 5px;
+    border-radius: 1px;*/ 
+  }
+
 
 #totals { 
   background:#f0f0f0; 
@@ -7,29 +46,55 @@
 /* cant tellif makesdiff*/
 
 #totals span { text-align:right; }
+
 .total-field {
   display: inline-block; 
-/*width: 30%;*/ 
+  /*width: 30%;*/ 
   padding: 0px 7px; 
-/*width: 100px;*/ 
-/*float: left; 
-margin-right: 10px;*/ 
+  /*width: 100px;*/ 
+  /*float: left; 
+  margin-right: 10px;*/ 
 }
+
+
+
+/* these used to be in index */
+
+.total-field-nav { 
+  color: white; 
+  font-size: 12pt; 
+  font-weight: normal; 
+}
+
+.total-field-nav strong { 
+  color: #5bc0de; 
+  /*#46b8da;*/
+}
+
+
+
+
 
 .subtotal {text-align: left;}
 
-.carttitle {}
+.quantity {}
 .pricesingle {float: left; font-size: 8pt;}
 .pricetotal {float: right; font-size: 8pt;}
+
+
+
+/* ---------- Items in Cart ---------- */
+
+
+.cart-item {
+  display: block;
+}
+
+.carttitle {}
+
 .cart-prices {float: right; font-size: 9pt; padding-right: 2px;}
 
-.starter-template {
-  padding: 25px 5px; /*40px 15px;*/
-  text-align: center;
-} 
-
-.quantity {}
-.cart-item {display: block;}
+/* ul .cart-dropdown #cart li .cart-item span .carttitle span cart-prices*/
 
 .empty {
 	float: right;
@@ -37,20 +102,36 @@ margin-right: 10px;*/
 	display: block;
 }
 
+
+
+/* ---------- Items listed ---------- */
+
 .item {
 	width:100%;
+  height: 45px;
+  /*padding: 10px;*/
 	text-align:left;
-	height: 45px;
-	/*padding: 10px;*/
 	vertical-align: middle;
 }
+
 .item-name {
 	float: left;
 	text-align:left;
 	width: 100px;
 }
-.item-price { float: right; }
 
+.item-price {
+  float: right;
+}
+
+
+
+
+
+.starter-template {
+  padding: 25px 5px; /*40px 15px;*/
+  text-align: center;
+} 
 
 .container {padding: 5px; margin: auto;}
 
