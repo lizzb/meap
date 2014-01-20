@@ -19,7 +19,7 @@
 	var lunchEndM = 45;
 
 	var dinnerStartH = 16;		// 4:46 pm
-	var dinnerStart = 46;
+	var dinnerStartM = 46;
 	
 	var dinnerEndH = 19; 		// 7:30pm
 	var dinnerEndM = 30;

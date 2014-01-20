@@ -29,15 +29,45 @@
 
     <style>
 
+    .condensed-menu-btn { font-size: 8pt;
+    	margin-left: 0px; 
+    	padding: 5px 3px; 
+    	margin-right: 5px; 
+    }
     
+    /* CART BUTTON */
+
+    /* CART MENU/DROPDOWN/LIST */
     
-    .total-field-nav { color: white; font-size: 12pt; font-weight: normal; }
-	.total-field-nav strong { color: #5bc0de;; /*#46b8da;*/}
 	
-	.cart-btn { border-radius: 1px; margin-top:20px;}
-	.cart-icon { color: #46b8da; font-size: 16pt; /* 12 */}
-	.cart-count { color: #46b8da;}
-	.cart-dropdown {/*width: 300px; margin-right: 5px; border-radius: 1px;*/}
+	.cart-btn { 
+		border-radius: 1px; 
+		/*margin-top: 20px;*/
+		/*padding: 7px; boxy funky*/
+		padding-left: 9px; /* 10 goes over */
+		padding-right: 9px;
+	}
+	.cart-icon { 
+		/*color: #46b8da;*/ 
+		font-size: 16pt; /* 12 */
+	}
+	.cart-count { 
+		/*color: #46b8da;*/ 
+		font-weight: bold;
+	}
+	.cart-dropdown { 
+		/*width: 300px; margin-right: 5px; border-radius: 1px;*/ 
+	}
+
+	.total-field-nav { 
+		color: white; 
+		font-size: 12pt; 
+		font-weight: normal; 
+	}
+	.total-field-nav strong { 
+		color: #5bc0de; 
+		/*#46b8da;*/
+	}
 
     </style>
 
@@ -54,7 +84,7 @@
 
 
     		<!-- JK PUT THE CART HERE YAY .... ooh adding navbar toggle is nice-->
-    		<button type="button" class="cart-btn dropdown-toggle btn navbar-toggle pull-right" 
+    		<button type="button" class="cart-btn dropdown-toggle btn btn-info navbar-toggle pull-right" 
 	data-toggle="collapse" data-target=".cart-dropdown">
     		<span class="cart-quantity cart-count">0</span>
     		<span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
@@ -73,13 +103,13 @@
         
         <div class="navbar-header"> 
 
-        	<!--
-          <button type="button" class="navbar-toggle btn-sm" data-toggle="collapse" data-target=".navbar-collapse">
+        	
+          <button type="button" class="navbar-toggle btn-xs condensed-menu-btn" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-			-->
+			
 
 
           <a class="navbar-brand" href="#">
@@ -117,7 +147,7 @@
 		-->
 				
           </a>	
-
+          <!--
 
           <button type="button" class="navbar-toggle btn-sm" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
