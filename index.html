@@ -29,11 +29,15 @@
 
     <style>
 
-    .cart-icon { color: #46b8da; font-size: 12pt;}
-    .cart-count { color: #46b8da;}
+    
+    
     .total-field-nav { color: white; font-size: 12pt; font-weight: normal; }
 	.total-field-nav strong { color: #5bc0de;; /*#46b8da;*/}
-	.cart-dropdown {/*width: 300px; margin-right: 5px;*/}
+	
+	.cart-btn { border-radius: 1px; margin-top:20px;}
+	.cart-icon { color: #46b8da; font-size: 16pt; /* 12 */}
+	.cart-count { color: #46b8da;}
+	.cart-dropdown {/*width: 300px; margin-right: 5px; border-radius: 1px;*/}
 
     </style>
 
@@ -46,14 +50,37 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
     	
     	<div class="container">
-        
-        <div class="navbar-header"> 
 
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+
+    		<!-- JK PUT THE CART HERE YAY .... ooh adding navbar toggle is nice-->
+    		<button type="button" class="cart-btn dropdown-toggle btn navbar-toggle pull-right" 
+	data-toggle="collapse" data-target=".cart-dropdown">
+    		<span class="cart-quantity cart-count">0</span>
+    		<span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
+      </button> 
+
+    		<!--
+    		<button type="button" class="navbar-toggle btn-sm" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <!--<br><br><br>-->
+
+    		
+
+        
+        <div class="navbar-header"> 
+
+        	<!--
+          <button type="button" class="navbar-toggle btn-sm" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+			-->
+
 
           <a class="navbar-brand" href="#">
 				<span class="eq-meals-over equivalency-meals">0</span> 
@@ -62,14 +89,24 @@
 				<label> Points </label> 
 
 
-				<!--
+				<!-- -->
 		        <div class="total-field-nav">
 					<span id="points-over" class='points-over'>0</span>
 					points <strong>over</strong>
 					<span id="eq-meals-over" class='eq-meals-over'>0</span>
 					meals
 				</div>
+				
+<!-- if you put the nav bars here in an attept to align below cart no dice
 				-->
+				<!-- 
+				if you put this here it will float to the right of 0 under 0 meals, but just hte text, not all the way on the right side of the screen
+
+				<button type="button" class="dropdown-toggle btn pull-right" 
+	data-toggle="collapse" data-target=".cart-dropdown">
+    		<span class="cart-quantity cart-count">0</span>
+    		<span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
+      </button> 
 
 				<div class="total-field-nav">
 					<span id="points-under" class='points-under'>0</span>
@@ -77,12 +114,35 @@
 					<span id="eq-meals-under" class='eq-meals-under'>0</span>
 					meals
 				</div>
-		
+		-->
 				
           </a>	
 
+
+          <button type="button" class="navbar-toggle btn-sm" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- if you put cart here it goes right next to title sad -->
+
         </div> <!-- / .navbar-header -->
 
+
+
+        <!-- THIS IS THE RIGHT PLACE TO PUT THE CART DROP DOWN BUTTON
+        		But it isn't in line with the 0 under 0 meals, which 
+        		should be part of the header... 
+				so you can choose to decomment the points-under above this code to have it nicely underneath the header OR keep it nicely in line with the cart button and fix padding later maybe?
+				or get rid of silly pretty much empty menu... or rearrange buttons? hrm
+        	
+        <button type="button" class="dropdown-toggle btn pull-right" 
+	data-toggle="collapse" data-target=".cart-dropdown">
+    		<span class="cart-quantity cart-count">0</span>
+    		<span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
+      </button> 
+      	-->
 
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -102,23 +162,23 @@
 
 
 
-
+	<!--
 
 	<button type="button" class="dropdown-toggle btn pull-right" 
 	data-toggle="collapse" data-target=".cart-dropdown">
     		<span class="cart-quantity cart-count">0</span>
     		<span class="glyphicon glyphicon-shopping-cart cart-icon"></span>
-      </button>
+      </button>-->
 
+<!-- this text will be in line with the cart button (floatign to far right) 
 	<div class="total-field-nav">
 		<span id="points-under" class='points-under'>0</span>
 		points <strong>under</strong>
 		<span id="eq-meals-under" class='eq-meals-under'>0</span>
 		meals
-	</div>
+	</div> -->
 
-
-
+	
     	
         <ul class="collapse cart-dropdown">
         	<li><strong>Cart</strong></li>
