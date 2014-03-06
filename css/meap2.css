@@ -228,4 +228,33 @@ fieldset[disabled] .btn {
   */
 
 
+  .condensed-menu-btn { 
+      font-size: 8pt;
+      margin-left: 0px; 
+      padding: 5px 3px; 
+      margin-right: 5px; 
+    }
+    
+    
+    
+    /* if i move it to meap2 it gets wider */
+  .cart-btn { 
+    border-radius: 1px; 
+    /*margin-top: 20px;*/
+    /*padding: 7px; boxy funky*/
+    padding-left: 8px; /* 10 goes over 9 is probably too close for iphone 5*/
+    padding-right: 8px;
+    margin-right: 0px;
+  }
+
+  /*
+  used to be here , now in meap2
+  .cart-btn
+  .cart-icon
+  .cart-count 
+  .total-field-nav and .total-field-nav strong 
+  */
+
+
+
   
