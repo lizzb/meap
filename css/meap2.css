@@ -1,26 +1,5 @@
 
 
-/*.cart-count { color: lightgrey; font-size: 10pt;}*/
-
-.cart-icon { 
-    /*color: #46b8da;*/ 
-    font-size: 16pt; /* 12 */
-  }
-
-
-.cart-count { 
-    /*color: #46b8da;*/ 
-    font-weight: bold;
-    color: lightgrey; font-size: 10pt;
-  }
-
-  /*.cart-count { color: lightgrey; font-size: 10pt;}  this used to be in meap2 */
-
-
-
-/* CART BUTTON */
-
-    /* CART MENU/DROPDOWN/LIST */
 
 
 /* well this is hacky, i should make ti only for the list in question..ohwell */
@@ -82,6 +61,46 @@ ul {
 .pricetotal {float: right; font-size: 8pt;}
 
 
+/* ---------- CART BUTTON ---------- */
+
+#cart-button {
+  /* btn-info */
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+.cart-icon { 
+    /*color: #46b8da;*/ 
+    font-size: 16pt; /* 12 */
+  }
+
+.cart-count { 
+    /*color: #46b8da;*/ 
+    font-weight: bold;
+    color: lightgrey; font-size: 10pt;
+  }
+
+    /* THIS STYLE MAKES IT wider 
+  .cart-btn { 
+    border-radius: 1px; 
+    /*margin-top: 20px;*
+    /*padding: 7px; boxy funky*
+    padding-left: 8px;  10 goes over 9 is probably too close for iphone 5*
+    padding-right: 8px;
+    margin-right: 0px;*
+  }*/
+
+  /*
+  used to be here , now in meap2
+  .cart-btn
+  .cart-icon
+  .cart-count 
+  .total-field-nav and .total-field-nav strong 
+  */
+
+
+/* CART MENU/DROPDOWN/LIST */
 
 /* ---------- Items in Cart ---------- */
 
@@ -104,6 +123,8 @@ ul {
 
 
 
+
+
 /* ---------- Items listed ---------- */
 
 .item {
@@ -112,7 +133,42 @@ ul {
   /*padding: 10px;*/
 	text-align:left;
 	vertical-align: middle;
+
+  /* btn-info */
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
 }
+
+.item:hover, .item:focus, .item:active, .item:active,
+.open #cart-button 
+{
+color: #ffffff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+
+}
+
+.btn-info:hover, .btn-info:focus,
+.btn-info:active, .btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+}
+
+.btn-info:active,
+.open .dropdown-toggle.btn-info {
+  background-image: none;
+}
+
+ /* disabled info colors 
+  background-color: #5bc0de;
+  border-color: #46b8da;
+  */
+
+
+
 
 .item-name {
 	float: left;
@@ -125,6 +181,10 @@ ul {
 }
 
 
+
+
+
+
 .starter-template {
   padding: 25px 5px; /*40px 15px;*/
   text-align: center;
@@ -133,15 +193,7 @@ ul {
 .container {padding: 5px; margin: auto;}
 
 
-/*
-.navbar-inverse {background-color: #563d7c;
-border-color: #463265;}
-
-.navbar-nav > li > a {
-color: #cdbfe3;
-}
-
-.navbar-inverse {height: 40px;}*/
+/* BUTTONS FROM BS */
 
 .btn {
   display: inline-block;
@@ -176,14 +228,12 @@ color: #cdbfe3;
   outline-offset: -2px;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   color: #333333;
   text-decoration: none;
 }
 
-.btn:active,
-.btn.active {
+.btn:active, .btn.active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -200,32 +250,6 @@ fieldset[disabled] .btn {
           box-shadow: none;
 }
 
-.btn-info {
-  color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
-}
-
-
-.btn-info:hover, .btn-info:focus,
-.btn-info:active, .btn-info.active,
-.open .dropdown-toggle.btn-info {
-  color: #ffffff;
-  background-color: #39b3d7;
-  border-color: #269abc;
-}
-
-.btn-info:active,
-.btn-info.active,
-.open .dropdown-toggle.btn-info {
-  background-image: none;
-}
-
- 
- /* disabled info colors 
-  background-color: #5bc0de;
-  border-color: #46b8da;
-  */
 
 
   .condensed-menu-btn { 
@@ -237,23 +261,7 @@ fieldset[disabled] .btn {
     
     
     
-    /* if i move it to meap2 it gets wider */
-  .cart-btn { 
-    border-radius: 1px; 
-    /*margin-top: 20px;*/
-    /*padding: 7px; boxy funky*/
-    padding-left: 8px; /* 10 goes over 9 is probably too close for iphone 5*/
-    padding-right: 8px;
-    margin-right: 0px;
-  }
 
-  /*
-  used to be here , now in meap2
-  .cart-btn
-  .cart-icon
-  .cart-count 
-  .total-field-nav and .total-field-nav strong 
-  */
 
 
 
