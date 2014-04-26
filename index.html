@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="">
@@ -20,6 +19,7 @@
     <!-- Bootstrap core CSS -->
     <!-- type="text/css"  href="./css/bootstrap.min.css" -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    
  	<link rel="stylesheet" href="./css/meap2.css"/>   
 
     <script>
@@ -121,8 +121,7 @@ try {
         </ul>
 
 </div> <!-- /.container -->
-
-    </div> <!-- /.navbar navbar-inverse navbar-fixed-top -->
+</div> <!-- /.navbar navbar-inverse navbar-fixed-top -->
     
 
     	
@@ -298,15 +297,10 @@ $('#cart').plum('shop', {
 	currencyFormat: '$00,000,000.00', // £
 	currencyCode: 'USD',
 	generateSKU: true,
-	
 	storage: 'session',
 	storageURL: 'shopping-cart.php',
 
-	emptyCartBefore: function () {
-		return confirm(
-			'Are you sure you want to empty your cart?'
-		);
-	}
+	emptyCartBefore: function () { return confirm('Are you sure you want to empty your cart?'); }
 });
 
 </script>
