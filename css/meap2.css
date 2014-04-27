@@ -34,7 +34,7 @@ ul { list-style:none;  }
 
 
 
-/* these used to be in index */
+
 
 .total-field-nav { 
   color: white; 
@@ -162,7 +162,12 @@ color: #ffffff;
 
 
 
-
+  /*hr { 
+  color: #ccc;
+  border:0; 
+  border-top:1px solid #ccc; 
+  margin:20px 0; 
+}*/
 
 
 
@@ -209,10 +214,7 @@ color: #ffffff;
   outline-offset: -2px;
 }
 
-.btn:hover, .btn:focus {
-  color: #333333;
-  text-decoration: none;
-}
+.btn:hover, .btn:focus { color: #333333; text-decoration: none; }
 
 .btn:active, .btn.active {
   background-image: none;
@@ -230,9 +232,22 @@ fieldset[disabled] .btn {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+/*<div id="products"> <ul>
+<li class="product purchase btn btn-info item" id="3">
+<span class="title">Chicken Caesar Salad</span>
+<span class="price"> $5.59</span> 
+</li>
+<div id="cart">
+<ul>
+<li class="cart-item" data-id="1">
+<span class="carttitle">PB&amp;J on Wheat</span> 
+<span class="cart-prices">$2.99 x 
+<input type="number" pattern="[0-9]*" class="quantity" value="1">
+</span><a class="remove" href="#"> X </a>
+</li></ul></div>
 
-
-
+*/
+/* currently not being used
   .condensed-menu-btn { 
       font-size: 8pt;
       margin-left: 0px; 
@@ -240,19 +255,9 @@ fieldset[disabled] .btn {
       margin-right: 5px; 
     }
     
-    
-.item-name {
-  float: left;
-  text-align:left;
-  width: 100px;
-}
+#products .item { text-align: center; font-size: 1.2em;}*/
+#products .price { float:right; }
 
-.item-price {
-  float: right;
-}
-    
-
-
-
+ul {padding-left: 0px;} /* from webkit somethingorother? */
 
   
