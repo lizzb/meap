@@ -4,9 +4,7 @@
 
 /* well this is hacky, i should make ti only for the list in question..ohwell */
 
-ul {
-  list-style:none; 
-}
+ul { list-style:none;  }
 
 .cart-dropdown { 
   margin: 0;
@@ -28,9 +26,8 @@ ul {
 
 .total-field {
   display: inline-block; 
-  /*width: 30%;*/ 
   padding: 0px 7px; 
-  /*width: 100px;*/ 
+  /*width: 30%;*/ /*width: 100px;*/ 
   /*float: left; 
   margin-right: 10px;*/ 
 }
@@ -45,40 +42,36 @@ ul {
   font-weight: normal; 
 }
 
-.total-field-nav strong { 
-  color: #5bc0de; 
-  /*#46b8da;*/
-}
-
-
-
-
-
-.subtotal {text-align: left;}
+.total-field-nav strong { color: #5bc0de; /*#46b8da;*/ }
 
 .quantity {}
+.subtotal {text-align: left;}
 .pricesingle {float: left; font-size: 8pt;}
 .pricetotal {float: right; font-size: 8pt;}
 
 
 /* ---------- CART BUTTON ---------- */
 
-#cart-button {
+#cart-button
+{
   /* btn-info */
   color: #ffffff;
   background-color: #5bc0de;
   border-color: #46b8da;
 }
 
-.cart-icon { 
+.cart-icon
+{ 
     /*color: #46b8da;*/ 
     font-size: 16pt; /* 12 */
   }
 
-.cart-count { 
+.cart-count
+{ 
     /*color: #46b8da;*/ 
     font-weight: bold;
-    color: lightgrey; font-size: 10pt;
+    color: lightgrey;
+    font-size: 10pt;
   }
 
     /* THIS STYLE MAKES IT wider 
@@ -170,18 +163,6 @@ color: #ffffff;
 
 
 
-.item-name {
-	float: left;
-	text-align:left;
-	width: 100px;
-}
-
-.item-price {
-  float: right;
-}
-
-
-
 
 
 
@@ -260,6 +241,15 @@ fieldset[disabled] .btn {
     }
     
     
+.item-name {
+  float: left;
+  text-align:left;
+  width: 100px;
+}
+
+.item-price {
+  float: right;
+}
     
 
 
